@@ -206,6 +206,8 @@ bool ConfigManager::loadFile(const std::string& _filename)
 	m_confInteger[KILLS_TO_BAN] = getGlobalNumber(L, "kills_to_ban", 20);
 	m_confInteger[MAX_PACKETS_PER_SECOND] = getGlobalNumber(L, "max_packets_per_second", 35);
 	m_confInteger[PARCEL_BLOCK] = getGlobalBoolean(L, "parcel_block", false);
+	m_confInteger[ENABLE_CAST] = getGlobalBoolean(L, "enableCast", false);
+	m_confInteger[MAX_CAST_VIEWERS] = getGlobalNumber(L, "max_cast_viewers", 50);
 	
 	m_isLoaded = true;
 	return true;
